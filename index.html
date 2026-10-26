@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#15122B">
+  <meta name="robots" content="noindex">
+  <title>A Última Honra de um Cavaleiro</title>
+  <meta name="description" content="Uma pequena aventura feita para uma rainha.">
+  <meta property="og:title" content="A Última Honra de um Cavaleiro">
+  <meta property="og:description" content="Uma pequena aventura feita para uma rainha.">
+  <meta property="og:image" content="https://lucas-amaralz.github.io/a-ultima-honra/assets/img/capa.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&family=Alegreya+SC:wght@700&family=Cinzel+Decorative:wght@700&family=Inter:wght@600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/01-reino.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="jogo" class="na-abertura">
+    <div class="palco">
+      <div class="camada"><img class="fundo" alt=""><img class="fundo" alt=""></div>
+      <div class="vinheta"></div>
+      <div class="particulas" aria-hidden="true"></div>
+    </div>
+
+    <section class="caixa" aria-live="polite">
+      <div class="nome"></div>
+      <p class="texto"></p>
+      <div class="opcoes"></div>
+      <span class="seta" aria-hidden="true">▼</span>
+      <i class="canto c1"></i><i class="canto c2"></i><i class="canto c3"></i><i class="canto c4"></i>
+    </section>
+
+    <p class="dica"><span class="toque">Toque para continuar</span><span class="tecla">Clique ou pressione ESPAÇO para continuar</span></p>
+
+    <div class="modal" id="convite" role="dialog" aria-label="Convite real">
+      <div class="pergaminho">
+        <div class="selo" aria-hidden="true">♥</div>
+        <h2>Convite Real</h2>
+        <p class="decreto">Por decreto do cavaleiro arrependido, Vossa Majestade está convocada para um café da tarde.</p>
+        <div class="detalhes">
+          <div class="folhinha"><span class="mes"></span><span class="dia"></span><span class="semana"></span></div>
+          <dl>
+            <dt>Horário</dt><dd data-campo="hora"></dd>
+            <dt>Local</dt><dd data-campo="local"></dd>
+            <dt>Traje</dt><dd data-campo="traje"></dd>
+          </dl>
+        </div>
+        <p class="rodape">válido para uma única rainha · intransferível</p>
+      </div>
+      <div class="botoes">
+        <button class="opcao" data-acao="aceitar">Sim</button>
+        <button class="opcao" data-acao="aceitar">Sem dúvidas</button>
+      </div>
+    </div>
+
+    <div class="modal" id="agenda" role="dialog" aria-label="Encontro marcado">
+      <div class="pergaminho">
+        <div class="estrela" aria-hidden="true"></div>
+        <h2>Encontro marcado!</h2>
+        <p class="decreto">Que tal guardar na sua agenda, pra esse cavaleiro não esquecer de aparecer?</p>
+        <a class="google" target="_blank" rel="noopener">
+          <span class="icone" aria-hidden="true"><i></i><b></b></span>Adicionar ao Google Agenda
+        </a>
+        <p class="resumo"></p>
+        <button class="ics" type="button">Não usa Google? Baixar pro calendário do celular</button>
+      </div>
+      <div class="botoes">
+        <button class="opcao" data-acao="continuar">Continuar</button>
+      </div>
+    </div>
+
+    <div id="abertura">
+      <div class="brasao" aria-hidden="true"></div>
+      <h1><span>A Última Honra</span><small>de um Cavaleiro</small></h1>
+      <p class="subtitulo">uma pequena aventura feita para uma rainha</p>
+      <button class="opcao comecar" disabled>Preparando o reino...</button>
+      <p class="duracao">dura cerca de um minuto</p>
+    </div>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
